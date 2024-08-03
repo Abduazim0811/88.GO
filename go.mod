@@ -5,6 +5,7 @@ go 1.22.4
 require (
 	github.com/Masterminds/squirrel v1.5.4
 	github.com/gin-gonic/gin v1.10.0
+	github.com/joho/godotenv v1.5.1
 )
 
 require (
