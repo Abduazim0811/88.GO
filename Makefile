@@ -12,3 +12,6 @@ migrate_force:
 
 migrate_file:
 	migrate create -ext sql -dir migrations -seq gin
+
+swag:
+	swag init -g internal/http/api/handler/handler.go

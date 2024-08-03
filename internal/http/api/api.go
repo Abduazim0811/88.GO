@@ -10,6 +10,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
+	swaggerFiles "github.com/swaggo/files"
+	ginSwagger "github.com/swaggo/gin-swagger"
 )
 
 func Routes() {
@@ -36,6 +38,7 @@ func Routes() {
 	router.GET("/books/:id", handler.GetbyIdBooks)
 	router.PUT("/books/:id", handler.UpdateBooks)
 	router.DELETE("/books/:id", handler.DeleteBooks)
+	router.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	router.Run(os.Getenv("PORT"))
 }
