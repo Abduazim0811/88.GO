@@ -30,7 +30,7 @@ func (p *PostgresBookRepository) Create(book models.Book)(*models.Book, error){
 
 	row := p.Db.QueryRow(sql, args...)
 	
-	if err := row.Scan(Book.Id); err != nil {
+	if err := row.Scan(&Book.Id); err != nil {
 		return nil, fmt.Errorf("unable to scan book")
 	}
 
