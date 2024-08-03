@@ -5,6 +5,7 @@ import (
 	"Book/internal/service"
 	"net/http"
 	"strconv"
+	_ "Book/docs"
 
 	"github.com/gin-gonic/gin"
 )
